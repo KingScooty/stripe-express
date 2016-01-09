@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action="/charge" method="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= stripe_publishable_key %>"
+        data-image="/images/logo.png"
+        data-name="Brand Name"
+        data-description="First Edition Product Name"
+        data-currency="gbp"
+        data-amount="3999"
+        data-locale="auto">
+      </script>
+    </form>
+
+  </body>
+</html>
